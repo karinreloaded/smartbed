@@ -7,6 +7,7 @@ import at.fhv.uct.adaptaal.smartbed.persistence.TechnologyFeatureRepository;
 
 import at.fhv.uct.adaptaal.smartbed.util.PersistenceUtil;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.io.Serializable;
@@ -52,4 +53,5 @@ public class FeatureController {
     public @ResponseBody void addRelationToTechnology(@RequestBody TechnologyFeature technologyFeature) {
         technologyFeatureRepository.save(technologyFeature);
     }
+
 }

@@ -6,9 +6,10 @@ import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
 @ComponentScan({
-    "at.fhv.uct.adaptaal.smartbed.domain",
-    "at.fhv.uct.adaptaal.smartbed.persistence",
-    "at.fhv.uct.adaptaal.smartbed.controllers"
+        "at.fhv.uct.adaptaal.smartbed.domain",
+        "at.fhv.uct.adaptaal.smartbed.persistence",
+        "at.fhv.uct.adaptaal.smartbed.controllers",
+        "at.fhv.uct.adaptaal.smartbed.services"
 })
 public class SmartbedApplication {
     public static void main(String[] args) {

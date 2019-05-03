@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Start</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script type="text/javascript" src="js/smartbed.js"></script>
+
+
+<body>
+<h3>Features</h3><br>
+
+<form th:action="@{/sleepconfigstart}" th:method="post" th:object="${resultMatches}">
+    <p th:text="${'Anzahl Features ' + matchedFeatures.size()}"></p>
+    <p th:text="${'erstes Feature ' + matchedFeatures[0].getFeatureName() + ' ' + resultMatches[0]}"></p>
+    <p th:text="${'zweites Feature ' + matchedFeatures[1].getFeatureName() + ' ' + resultMatches[1]}"></p>
+
+    <label th:for="mainfeature1">Noise?</label>
+    <input type="hidden" name="_mainfeature1" th:value="${resultMatches[0]}"/>
+    <input id="mainfeature1" name="mainfeature1" type="checkbox" th:value="${resultMatches[0]}"/>
+    <label for="mainfeature2">Brooding?</label>
+    <input id="mainfeature2" type="checkbox" th:value="${resultMatches[1]}"/>
+
+
+    <button onclick="test()">Submit</button>
+   <!--  <input type="submit" name = "submitNoise" value=">Weiter" action="JavaScript:test()"/> -->
+</form>
+
+
+</body>
+</html>

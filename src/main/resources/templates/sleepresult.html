@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Result</title>
+
+</head>
+<body>
+<h3>Ergebnis</h3>
+
+<form th:action="@{/sleepresult}" >
+    <p>Test</p>
+    <p th:text="${matchedFeatures.size()}"></p>
+    <p th:text="${resultMatches[1]}"></p>
+
+</form>
+
+<!-- <p th:text="${matchedFeatures.size()}"></p> -->
+</body>
+</html>
