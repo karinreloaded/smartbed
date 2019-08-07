@@ -27,9 +27,19 @@ public class FeatureController {
         this.technologyFeatureRepository = technologyFeatureRepository;
     }
 
-    @GetMapping
+    @GetMapping (path = "/by/id")
     public @ResponseBody Optional<Feature> getById(@RequestParam("id") Integer id) {
         return featureRepository.findById(id);
+    }
+
+    @GetMapping (path = "/by/level")
+    public @ResponseBody Iterable<Feature> getByLevel(@RequestParam("level") Integer level) {
+        return featureRepository.findByLevel(level);
+    }
+
+    @GetMapping (path = "/by/upperlevel")
+    public @ResponseBody Iterable<Feature> getByUpperLevelFeature(@RequestParam("upperlevel") Integer upperlevel) {
+        return featureRepository.findByUpperLevelFeature(upperlevel);
     }
 
     @GetMapping(path = "/all")

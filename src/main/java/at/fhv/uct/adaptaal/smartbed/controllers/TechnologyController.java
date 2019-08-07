@@ -25,7 +25,7 @@ public class TechnologyController {
         this.technologyFeatureRepository = technologyFeatureRepository;
     }
 
-    @GetMapping
+    @GetMapping (path="/by/id")
     public @ResponseBody Optional<Technology> getById(@RequestParam("id") Integer id) {
         return technologyRepository.findById(id);
     }

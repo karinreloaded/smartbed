@@ -14,6 +14,9 @@ public class Technology {
     @Column(name = "name")
     private String name;
 
+    @Column(name="german_name")
+    private String german_name;
+
     public Integer getId() {
         return id;
     }
@@ -30,17 +33,26 @@ public class Technology {
         this.name = name;
     }
 
+    public String getGerman_name() {
+        return german_name;
+    }
+
+    public void setGerman_name(String german_name) {
+        this.german_name = german_name;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Technology that = (Technology) o;
         return Objects.equals(id, that.id) &&
-                Objects.equals(name, that.name);
+                Objects.equals(name, that.name) &&
+                Objects.equals(german_name, that.german_name);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, name);
+        return Objects.hash(id, name, german_name);
     }
 }

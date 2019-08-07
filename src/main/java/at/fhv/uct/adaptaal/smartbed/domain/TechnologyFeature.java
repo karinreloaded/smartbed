@@ -5,7 +5,9 @@ import java.util.Objects;
 
 @Entity
 @Table(name = "technology_feature")
-public class TechnologyFeature {
+public class
+
+TechnologyFeature {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
